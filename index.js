@@ -54,7 +54,7 @@ app.get("/api/todolist", async (req, res) => {
       toDolist,
     });
   } catch (error) {
-    console.log(err);
+    console.log(error.message);
     return res.status(500).json({
       message: "interal server error!",
     });
