@@ -20,7 +20,6 @@ mongoose
   });
 
 //   Add toDo
-
 app.post("/api/addtodo", async (req, res) => {
   try {
     const { toDo } = req.body;
