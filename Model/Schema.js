@@ -9,4 +9,4 @@ const todoSchema = new mongoose.Schema({
   },
 });
 
-export const todoModel = mongoose.model(`ToDo List`,todoSchema);
+export const todoModel = mongoose.model(`ToDoList`,todoSchema);
