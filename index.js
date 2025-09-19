@@ -49,13 +49,12 @@ app.post("/api/addtodo", async (req, res) => {
 app.get("/api/todolist", async (req, res) => {
   try {
     const toDolist = await todoModel.find();
-    res.status(200).json({
-      toDolist,
-    });
+    res.status(200).json({ toDolist });
   } catch (error) {
-    console.log(error.message);
-    return res.status(500).json({
+    console.error("Error fetching todos:", error); // ✅ This shows the REAL error
+    res.status(500).json({
       message: "internal server error!",
+      error: error.message, // ✅ Show it in response
     });
   }
 });
